@@ -1,7 +1,7 @@
 %define module	PerlIO-via-Bzip2
 %define name	perl-%{module}
 %define version	0.02
-%define release	%mkrel 2
+%define release	%mkrel 3
 
 Name:		%{name}
 Version:	%{version}
