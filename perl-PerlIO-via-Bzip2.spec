@@ -11,6 +11,7 @@ License:	GPL or Artistic
 Group:		Development/Perl
 Source:		http://search.cpan.org/CPAN/authors/id/F/FI/FITZNER/%{module}-%{version}.tar.bz2
 Url:		http://www.cpan.org
+BuildRoot:	%{_tmppath}/%{name}-buildroot/
 Buildrequires:	perl-devel
 BuildRequires:  bzip2-devel
 BuildRequires:  perl(Compress::Bzip2)
