@@ -1,28 +1,27 @@
-%define module	PerlIO-via-Bzip2
-%define name	perl-%{module}
-%define version	0.02
-%define release	%mkrel 5
+%define upstream_name	 PerlIO-via-Bzip2
+%define upstream_version 0.02
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	PerlIO layer for Bzip2 (de)compression
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source:		http://search.cpan.org/CPAN/authors/id/F/FI/FITZNER/%{module}-%{version}.tar.bz2
 Url:		http://www.cpan.org
-BuildRoot:	%{_tmppath}/%{name}-buildroot/
-Buildrequires:	perl-devel
+Source0:	http://search.cpan.org/CPAN/authors/id/F/FI/FITZNER/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:  bzip2-devel
 BuildRequires:  perl(Compress::Bzip2)
 BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module implements a PerlIO layer which will let you handle bzip2
 compressed files transparently.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -43,4 +42,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc README
 %{perl_vendorlib}/*
 %{_mandir}/*/*
-
