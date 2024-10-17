@@ -8,7 +8,7 @@ Release:	5
 Summary:	PerlIO layer for Bzip2 (de)compression
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://www.cpan.org
+Url:		https://www.cpan.org
 Source0:	http://search.cpan.org/CPAN/authors/id/F/FI/FITZNER/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
