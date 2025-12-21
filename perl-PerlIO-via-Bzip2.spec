@@ -11,6 +11,7 @@ Group:		Development/Perl
 Url:		https://www.cpan.org
 Source0:	http://search.cpan.org/CPAN/authors/id/F/FI/FITZNER/%{upstream_name}-%{upstream_version}.tar.bz2
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	bzip2-devel
 BuildRequires:	perl(Compress::Bzip2)
