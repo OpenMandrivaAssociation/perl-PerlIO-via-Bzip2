@@ -2,14 +2,14 @@
 %define upstream_version 0.02
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	6
 
 Summary:	PerlIO layer for Bzip2 (de)compression
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://www.cpan.org
-Source0:	http://search.cpan.org/CPAN/authors/id/F/FI/FITZNER/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/PerlIO-via-Bzip2
+Source0:	https://cpan.metacpan.org/authors/id/A/AR/ARJEN/PerlIO-via-Bzip2-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
