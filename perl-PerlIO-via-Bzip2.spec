@@ -1,15 +1,13 @@
 %define upstream_name	 PerlIO-via-Bzip2
-%define upstream_version 0.02
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.02
+Release:	7
 
 Summary:	PerlIO layer for Bzip2 (de)compression
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/PerlIO-via-Bzip2
-Source0:	https://cpan.metacpan.org/authors/id/A/AR/ARJEN/PerlIO-via-Bzip2-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/A/AR/ARJEN/PerlIO-via-Bzip2-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -22,7 +20,7 @@ This module implements a PerlIO layer which will let you handle bzip2
 compressed files transparently.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -46,9 +44,7 @@ make test
 
 * Mon Aug 03 2009 Jérôme Quelin <jquelin@mandriva.org> 0.20.0-1mdv2010.0
 + Revision: 407960
-- rebuild using %%perl_convert_version
-
-* Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.02-5mdv2009.0
+- rebuild using %0.02 Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.02-5mdv2009.0
 + Revision: 241815
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
